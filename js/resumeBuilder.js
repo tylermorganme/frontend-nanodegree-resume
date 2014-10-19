@@ -152,9 +152,35 @@ var inName = function (fName, lName){
 
 bio.displayHeader();
 bio.displayContacts("#topContacts");
-bio.displayContacts("#footerContacts");
 work.display();
 projects.display();
-projects.headerContacts();
 education.displaySchools();
 education.displayCourses();
+bio.displayContacts("#footerContacts");
+
+$("#mapDiv").append(googleMap);
+
+if(document.getElementsByClassName("flex-item").length === 0) {
+    document.getElementById("topContacts").style.display = "none";
+}
+if(document.getElementsByTagName("h1").length === 0) {
+document.getElementById("header").style.display = "none";
+}
+if(document.getElementsByClassName("work-entry").length === 0) {
+document.getElementById("workExperience").style.display = "none";
+}
+if(document.getElementsByClassName("project-entry").length === 0) {
+document.getElementById("projects").style.display = "none";
+}
+if(document.getElementsByClassName("education-entry").length === 0) {
+document.getElementById("education").style.display = "none";
+}
+if(document.getElementsByClassName("skills-entry").length === 0) {
+document.getElementById("skillsChart").style.display = "none";
+}
+if(document.getElementsByClassName("flex-item").length === 0) {
+document.getElementById("letsConnect").style.display = "none";
+}
+if(document.getElementById("map") == undefined) {
+document.getElementById("mapDiv").style.display = "none";
+}

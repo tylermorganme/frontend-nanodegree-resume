@@ -127,7 +127,7 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    locations.push(bio.contacts.location.city + " " + bio.contacts.location.state);
     
     // iterates through school locations and appends each location to
     // the locations array
@@ -235,12 +235,12 @@ function initializeMap() {
 Uncomment all the code below when you're ready to implement a Google Map!
 */
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+//Calls the initializeMap() function when the page loads
+window.addEventListener('load', initializeMap);
 
-// Vanilla JS way to listen for resizing of the window 
-// and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+//Vanilla JS way to listen for resizing of the window 
+//and adjust map bounds
+window.addEventListener('resize', function(e) {
+  //Make sure the map bounds get updated on page resize
+  map.fitBounds(mapBounds);
+});
