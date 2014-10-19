@@ -11,7 +11,10 @@ var bio = {
 		"linkedIn": "www.linkedin.com/in/tylermorganme/",
 		"github": "https://github.com/tylermorganme",
 		"twitter": "@tylermorganme",
-		"location": "Salt Lake City"
+		"location": {
+				"city": "Salt Lake City",
+				"state": "Utah"
+			}
 	},
 	"bioPic": "images/tyler-resume-pic.jpg",
 	"welcomeMessage": "Hello and Welcome thank for checking out my resume.",
@@ -39,7 +42,7 @@ var bio = {
 		$(location).append(HTMLlinkedIn.replace("%data%", bio.contacts.linkedIn));
 		$(location).append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 		$(location).append(HTMLgithub.replace("%data%", bio.contacts.github));
-		$(location).append(HTMLlocation.replace("%data%", bio.contacts.location));
+		$(location).append(HTMLlocation.replace("%data%", bio.contacts.location.city +" " + bio.contacts.location.state));
 	}
 };
 

@@ -128,17 +128,16 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location.city + " " + bio.contacts.location.state);
-    
     // iterates through school locations and appends each location to
     // the locations array
     for (var school in education.schools) {
-      locations.push(education.schools[school].location);
+      locations.push(education.schools[school].location.city + " " + education.schools[school].location.state);
     }
 
     // iterates through work locations and appends each location to
     // the locations array
     for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
+      locations.push(work.jobs[job].location.city + " " + work.jobs[job].location.state);
     }
 
     return locations;
