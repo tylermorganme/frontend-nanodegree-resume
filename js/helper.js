@@ -24,7 +24,7 @@ var HTMLblog = "<li class='flex-item'><span class='orange-text'>blog</span><span
 var HTMLlocation = "<li class='flex-item'><span class='orange-text'>location</span><span class='white-text'>%data%</span></li>";
 var HTMLlinkedIn = "<li class='flex-item'><span class='orange-text'>linkedin</span><span class='white-text'>%data%</span></li>";
 
-var HTMLbioPic = "<img src='%data%' class='biopic clear'>";
+var HTMLbioPic = '<img src="%data%"" class="biopic clear">';
 var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";
 var HTMLclear = '<div style="clear: both;"></div>';
 
@@ -172,7 +172,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+      infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
